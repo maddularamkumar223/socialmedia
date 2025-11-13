@@ -1,0 +1,31 @@
+form{
+    border-radius: 20px;
+    padding: 20px 0; 
+    border: 5px solid;
+}
+
+form label{
+    display: block;
+    font-size: 20px;
+    font-weight:500;
+    margin: 10px;
+}
+form input{
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+form input[type="radio"]{
+    width: 20px;
+}
+
+form article:last-child{
+    text-align: center;
+    button{
+        margin: 10px;
+        width: 50%;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}

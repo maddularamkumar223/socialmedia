@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css" />
+  </head>
+  <body>
+    <main
+      class="container-fluid d-grid align-items-center justify-content-center vh-100"
+    >
+      <form action="" class="container row">
+        <article class="col-12 col-md-6">
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder="Enter Your name" />
+        </article>
+        <article class="col-12 col-md-6">
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="Enter your email" />
+        </article>
+        <article class="col-12 col-md-6">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Your password"
+          />
+        </article>
+        <article class="col-12 col-md-6">
+          <label for="confirmpassword">Confirm Password</label>
+          <input
+            type="password"
+            name="confirmpassword"
+            placeholder="Enter Your password"
+          />
+        </article>
+        <article class="col-12 col-md-6">
+          <label for="dob">Date Of Birth</label>
+          <input type="date" name="dob" />
+        </article>
+        <article class="col-12 col-md-6">
+          <label for="gender">Gender</label>
+          <input type="radio" name="gender" value="Male" />Male
+          <input type="radio" name="gender" value="Female" />Female
+          <input type="radio" name="gender" value="Others" />Others
+        </article>
+        <article class="col-12 col-md-6">
+          <label for="image">Upload A Profile Picture</label>
+          <input type="file" name="image" />
+        </article>
+        <article class="col-12 col-md-6">
+          <label for="contact">Contact</label>
+          <input type="tel" name="contact" placeholder="Enter Contact Number" />
+        </article>
+        <article class="col-12">
+          <button>Submit</button>
+        </article>
+      </form>
+    </main>
+    <script src="./index.js"></script>
+    <script src="../bootstrap/bootstrap.js"></script>
+  </body>
+</html>
