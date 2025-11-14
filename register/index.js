@@ -2,6 +2,7 @@ let form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   passwordConformation();
+  location.href = "../login/index.html";
 });
 let passwordConformation = () => {
   let formData = new FormData(form);
@@ -36,17 +37,3 @@ let addUser = async (data) => {
     body: JSON.stringify(data),
   });
 };
-
-let main = document.querySelector("main");
-
-let fetchUser = async () => {
-  let response = await fetch("http://localhost:3000/users");
-  let data = await response.json();
-
-  data.map((value) => {
-    let img = document.createElement("img");
-    img.src = value.image;
-    main.append(img);
-  });
-};
-fetchUser()
