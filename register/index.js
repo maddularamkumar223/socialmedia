@@ -20,6 +20,7 @@ let passwordConformation = () => {
         contact: formData.get("contact"),
         password: formData.get("password"),
         image: imageData,
+        post: [],
       };
       addUser(details);
     };

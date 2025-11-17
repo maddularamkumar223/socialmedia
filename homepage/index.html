@@ -7,5 +7,12 @@
   </head>
   <body>
     <h1>Home page</h1>
+    <button>Create Post</button>
+    <script>
+      let postButton = document.querySelector("button");
+      postButton.addEventListener("click", () => {
+        location.href = "../post/index.html";
+      });
+    </script>
   </body>
 </html>

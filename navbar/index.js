@@ -87,7 +87,7 @@ let createNavbar = (array, position) => {
 };
 let bottomData = [
   {
-    name: "Home",
+    name: '<i class="fa-solid fa-house"></i>',
     path: "#",
   },
   {
