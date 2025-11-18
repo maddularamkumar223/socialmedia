@@ -20,3 +20,8 @@ form.addEventListener("submit", (e) => {
   let formData = new FormData(form);
   validation(formData.get("username"), formData.get("password"));
 });
+
+let signup = document.getElementById("signup");
+signup.addEventListener("click", () => {
+  location.href = "../register/index.html";
+});

@@ -4,15 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <h1>Home page</h1>
-    <button>Create Post</button>
-    <script>
-      let postButton = document.querySelector("button");
-      postButton.addEventListener("click", () => {
-        location.href = "../post/index.html";
-      });
-    </script>
+    <main>
+      <section class="container">
+        <aside class="following"></aside>
+      </section>
+      <button>Create Post</button>
+      <button id="logout">Logout</button>
+    </main>
+    <script src="./index.js"></script>
+    <script src="../bootstrap/bootstrap.js"></script>
   </body>
 </html>

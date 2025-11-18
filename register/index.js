@@ -21,6 +21,8 @@ let passwordConformation = () => {
         password: formData.get("password"),
         image: imageData,
         post: [],
+        followers: [],
+        following: [],
       };
       addUser(details);
     };
@@ -38,3 +40,8 @@ let addUser = async (data) => {
     body: JSON.stringify(data),
   });
 };
+
+let login = document.getElementById("login");
+login.addEventListener("click", () => {
+  location.href = "../login/index.html";
+});
