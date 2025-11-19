@@ -15,19 +15,18 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   let formData = new FormData(form);
   let postImage = formData.get("uploadImage");
-  let audio = formData.get("song");
+  console.log(postImage);
   let reader = new FileReader();
   reader.onload = (event) => {
     let image = event.target.result;
-    let song = event.target.result;
     let postData = {
       caption: formData.get("caption"),
       mention: formData.get("mention"),
       uploadImage: image,
       closeFriends: formData.get("closeFriends"),
-      song: song,
     };
     fetchSingleUser(localStorage.getItem("id"), postData);
   };
-  reader.readAsDataURL(postImage, audio);
+  reader.readAsDataURL(postImage);
 });
+  

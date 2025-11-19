@@ -1,4 +1,4 @@
-article {
+.follow {
   height: 200px;
   width: 150px;
   text-align: center;
@@ -18,9 +18,26 @@ article {
   }
 }
 
-aside {
+.following {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+figure div {
+  margin: 10px;
+}
+i {
+  font-size: 30px;
+}
+
+.fa-heart{
+  color: red;
 }
