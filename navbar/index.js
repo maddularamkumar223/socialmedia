@@ -1,88 +1,31 @@
-// let container = document.querySelector(".container");
-// let main = document.querySelector("main");
-// let navbar = document.createElement("nav");
-// let array = [
-//   {
-//     name: "Home",
-//     path: "#",
-//   },
-//   {
-//     name: "Search",
-//     path: "#",
-//   },
-//   {
-//     name: "Post",
-//     path: "#",
-//   },
-//   {
-//     name: "reels",
-//     path: "#",
-//   },
-//   {
-//     name: "Profile",
-//     path: "#",
-//   },
-// ];
-
-// let ul = document.createElement("ul");
-// array.map((value) => {
-//   let li = document.createElement("li");
-//   let a = document.createElement("a");
-//   a.href = value.path;
-//   a.innerHTML = value.name;
-//   li.appendChild(a);
-//   ul.appendChild(li);
-// });
-// navbar.appendChild(ul);
-// document.body.appendChild(navbar);
-
-// let topNavbar = document.createElement("nav");
-// let topUl = document.createElement("ul");
-// let topData = [
-//   {
-//     name: "logo",
-//     path: "#",
-//   },
-//   {
-//     name: "Notifications",
-//     path: "#",
-//   },
-//   {
-//     name: "Messages",
-//     path: "#",
-//   },
-// ];
-
-// topData.map((value) => {
-//   let a = document.createElement("a");
-//   let li = document.createElement("li");
-//   a.href = value.path;
-//   a.innerHTML = value.name;
-//   li.appendChild(a);
-//   topUl.appendChild(li);
-// });
-// topNavbar.appendChild(topUl);
-// container.before(topNavbar);
-
 // ! Creating a function for navbar
 let container = document.querySelector(".container");
 let main = document.querySelector("main");
-let createNavbar = (array, position) => {
+let createNavbar = (array, position = "") => {
   let navbar = document.createElement("nav");
   let ul = document.createElement("ul");
+  ul.classList = "row";
   array.map((value) => {
-    let a = document.createElement("a");
+    let button = document.createElement("button");
     let li = document.createElement("li");
-    a.href = value.path;
-    a.innerHTML = value.name;
-    li.appendChild(a);
+    li.classList = "col";
+    button.addEventListener("click", () => {
+      location.href = value.path;
+    });
+    button.innerHTML = value.name;
+    li.appendChild(button);
     ul.appendChild(li);
   });
   navbar.appendChild(ul);
   if (position === "top") {
     container.before(navbar);
-  } else {
+    navbar.className = "responsiveNavbar";
+  } else if (position === "bottom") {
+    navbar.className = "responsiveNavbar";
     main.appendChild(navbar);
+  } else {
+    container.before(navbar);
+    navbar.className = "navbar";
   }
 };
 let bottomData = [
@@ -91,35 +34,67 @@ let bottomData = [
     path: "#",
   },
   {
-    name: "Search",
+    name: '<i class="fa-solid fa-magnifying-glass"></i>',
     path: "#",
   },
   {
-    name: "Post",
+    name: '<i class="fa-solid fa-plus"></i>',
+    path: "../post/index.html",
+  },
+  {
+    name: '<i class="fa-brands fa-youtube"></i>',
     path: "#",
   },
   {
-    name: "reels",
-    path: "#",
-  },
-  {
-    name: "Profile",
-    path: "#",
+    name: '<i class="fa-solid fa-user"></i>',
+    path: "../profile/profile.html",
   },
 ];
 createNavbar(bottomData, "bottom");
 let topData = [
   {
     name: "logo",
+    path: "../homepage/index.html",
+  },
+  {
+    name: '<i class="fa-solid fa-bell"></i>',
     path: "#",
   },
   {
-    name: "Notifications",
+    name: '<i class="fa-solid fa-message"></i>',
     path: "#",
   },
   {
-    name: "Messages",
+    name: '<i class="fa-solid fa-arrow-right-from-bracket"></i>',
     path: "#",
   },
 ];
 createNavbar(topData, "top");
+
+let navbar = [
+  {
+    name: "logo",
+    path: "../homepage/index.html",
+  },
+  {
+    name: '<i class="fa-solid fa-plus"></i>',
+    path: "../post/index.html",
+  },
+  {
+    name: '<i class="fa-solid fa-bell"></i>',
+    path: "#",
+  },
+  {
+    name: '<i class="fa-solid fa-message"></i>',
+    path: "#",
+  },
+  {
+    name: '<i class="fa-solid fa-arrow-right-from-bracket"></i>',
+    path: "#",
+  },
+  {
+    name: '<i class="fa-solid fa-user"></i>',
+    path: "../profile/profile.html",
+  },
+];
+createNavbar(navbar);

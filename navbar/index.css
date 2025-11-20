@@ -1,20 +1,26 @@
-nav {
+.responsiveNavbar {
   display: none;
+  width: 100%;
 }
 
 ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  width: 100%;
   list-style: none;
-  a{
-    text-decoration: none;
-    color: black;
+  height: 100%;
+  i {
+    font-size: 20px;
   }
+}
+button {
+  background-color: transparent;
+  border: none;
 }
 
 @media all and (max-width: 576px) {
-  nav {
+  .responsiveNavbar {
     display: block;
+  }
+  .navbar {
+    display: none;
   }
 }
