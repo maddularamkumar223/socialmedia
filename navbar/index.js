@@ -86,7 +86,7 @@ let navbar = [
   },
   {
     name: '<i class="fa-solid fa-message"></i>',
-    path: "#",
+    path: "../users/user.html",
   },
   {
     name: '<i class="fa-solid fa-arrow-right-from-bracket"></i>',

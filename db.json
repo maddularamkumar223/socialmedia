@@ -37,7 +37,8 @@
       "followers": [],
       "following": [
         "5306",
-        "3003"
+        "3003",
+        "6240"
       ]
     },
     {
@@ -157,6 +158,38 @@
       "following": [
         "9d05"
       ]
+    }
+  ],
+  "messages": [
+    {
+      "id": "3e7b3873-05d4-4e8a-92be-8dc204ee167b",
+      "myId": "6240",
+      "userId": "9d05",
+      "text": "Hello Ram"
+    },
+    {
+      "id": "c6e45ab1-da2b-48bc-bfab-22af4f2e8ba3",
+      "myId": "6240",
+      "userId": "9d05",
+      "text": "How are you"
+    },
+    {
+      "id": "2365c850-abc0-4399-a575-3b3d1e3618f2",
+      "myId": "9d05",
+      "userId": "6240",
+      "text": "Hello Bro"
+    },
+    {
+      "id": "6ba68d57-173f-4424-981b-723cf35a3169",
+      "myId": "9d05",
+      "userId": "6240",
+      "text": "I am fine"
+    },
+    {
+      "id": "f787112c-5661-4e1b-b3e0-8bf94667586c",
+      "myId": "9d05",
+      "userId": "5306",
+      "text": "Where are you"
     }
   ]
 }
