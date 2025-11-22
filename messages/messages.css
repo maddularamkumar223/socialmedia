@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+}
+article {
+  height: 80%;
+  border: solid;
+  overflow-y: scroll;
+}
+.userData {
+  height: 13%;
+  display: flex;
+  align-items: center;
+  border: solid;
+
+  img {
+    height: 80%;
+    width: 100px;
+    border-radius: 100%;
+  }
+  p {
+    font-size: 30px;
+  }
+}
+form {
+  height: 7%;
+  border: solid;
+  display: flex;
+}
+input {
+  flex-basis: 90%;
+}
+button {
+  flex-basis: 10%;
+}
+
+.messageDisplay aside {
+  padding: 10px;
+}
+
+.messageDisplay p {
+  display: inline-block;
+  border: solid;
+  border-radius: 20px;
+  width: 400px;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.right span {
+  text-align: start;
+}
+.right {
+  text-align: end;
+}
+.left {
+  text-align: start;
+}

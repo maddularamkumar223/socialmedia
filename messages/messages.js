@@ -28,14 +28,36 @@ let displayMessage = async () => {
   console.log(data);
   let filterMessages = data.filter(
     (value) =>
-      localStorage.getItem("userId") == value.userId &&
-      localStorage.getItem("id") == value.userId
+      (value.userId == localStorage.getItem("userId") &&
+        value.myId == localStorage.getItem("id")) ||
+      (value.userId == localStorage.getItem("id") &&
+        value.myId == localStorage.getItem("userId"))
   );
-  console.log(filterMessages);
   filterMessages.map((value) => {
+    let messageContainer = document.createElement("aside");
     let message = document.createElement("p");
     message.innerHTML = value.text;
-    document.querySelector(".messageDisplay").append(message);
+
+    if (localStorage.getItem("id") == value.myId) {
+      messageContainer.classList = "right";
+    } else {
+      messageContainer.classList = "left";
+    }
+    messageContainer.append(message);
+    document.querySelector(".messageDisplay").append(messageContainer);
   });
 };
 displayMessage();
+
+let userData = async () => {
+  let response = await fetch(
+    `http://localhost:3000/users/${localStorage.getItem("userId")}`
+  );
+  let singleUser = await response.json();
+  console.log(singleUser);
+  let data = document.getElementsByClassName("userData");
+  data[0].children[0].src = singleUser.image || "../asserts/user.jpeg";
+  data[0].children[1].innerHTML = singleUser.name;
+};
+userData();
+console.log(data[0].children[0]);
