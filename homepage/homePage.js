@@ -1,11 +1,13 @@
+import { addNotification } from "../notification/addNotification.js";
+
 let postButton = document.querySelector("button");
 postButton.addEventListener("click", () => {
-  location.href = "../post/index.html";
+  location.href = "../post/post.html";
 });
 let logout = document.getElementById("logout");
 logout.addEventListener("click", () => {
   localStorage.removeItem("id");
-  location.href = "../login/index.html";
+  location.href = "../login/login.html";
 });
 let fetchUsers = async () => {
   let response = await fetch(`http://localhost:3000/users`);
@@ -27,12 +29,17 @@ let fetchUsers = async () => {
     let image = document.createElement("img");
     let profileName = document.createElement("p");
     let followButton = document.createElement("button");
-    followButton.innerHTML = "Follow";
+    followButton.innerHTML = followingUsers.some(
+      (user) => user.id === element.id
+    )
+      ? "Following"
+      : "Follow";
     profileName.innerHTML = element.name;
     image.src = element.image || "../asserts/user.jpeg";
     userContainer.classList = "follow col-6 col-md-3";
     followButton.addEventListener("click", () => {
       addFollowings(element.id, localStorage.getItem("id"));
+      addNotification(element.id);
     });
     userContainer.append(image, profileName, followButton);
     document.querySelector(".following").appendChild(userContainer);
@@ -51,7 +58,6 @@ let addFollowings = async (userId, id) => {
   let singleData = await response.json();
   console.log(singleData.following);
   let updateFollowings = [...singleData.following, userId];
-  console.log(updateFollowings);
   addDataFollowing(updateFollowings, id);
 };
 
@@ -86,7 +92,6 @@ let displayPost = (data) => {
         div.children[0].style.color = "red";
       });
 
-      console.log(div.children[0]);
       displayImage.src = value.uploadImage;
       figCaption.innerHTML = value.caption;
 

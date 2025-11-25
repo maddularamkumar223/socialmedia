@@ -7,7 +7,7 @@ let validation = async (username, password) => {
   );
   if (singleUser.length === 1) {
     alert("Login Successful");
-    location.href = "../homepage/index.html";
+    location.href = "../homepage/homePage.html";
     localStorage.setItem("id", singleUser[0].id);
   } else {
     alert("Login Failed");

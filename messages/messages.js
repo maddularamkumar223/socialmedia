@@ -37,7 +37,6 @@ let displayMessage = async () => {
     let messageContainer = document.createElement("aside");
     let message = document.createElement("p");
     message.innerHTML = value.text;
-
     if (localStorage.getItem("id") == value.myId) {
       messageContainer.classList = "right";
     } else {

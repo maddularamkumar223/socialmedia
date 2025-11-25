@@ -36,9 +36,9 @@
       ],
       "followers": [],
       "following": [
-        "5306",
+        "6240",
         "3003",
-        "6240"
+        "5306"
       ]
     },
     {
@@ -52,10 +52,7 @@
       "post": [],
       "followers": [],
       "following": [
-        "9d05",
-        "5306",
-        "3003",
-        "3003"
+        "9d05"
       ]
     },
     {
@@ -101,9 +98,9 @@
       ],
       "followers": [],
       "following": [
-        "6240",
         "b664",
-        "cda0"
+        "9d05",
+        "5306"
       ]
     },
     {
@@ -118,10 +115,7 @@
       "post": [],
       "followers": [],
       "following": [
-        "9d05",
-        "6240",
-        "3003",
-        "cda0"
+        "9d05"
       ]
     },
     {
@@ -250,6 +244,68 @@
       "myId": "9d05",
       "userId": "5306",
       "text": "hgfdsafghjkl;/\"?"
+    },
+    {
+      "id": "254bf56a-6e37-46c1-b33e-d98d2a7c049a",
+      "myId": "9d05",
+      "userId": "6240",
+      "text": "aszdfghjkl;kjhgfdsadfghjkl;'lkjhgfdsafghjkl;'lkjhgfdsafghjkl;'lkjhgfdsadfghjkl"
+    },
+    {
+      "id": "9ed62621-23a9-4f67-ab3a-9caf882f591b",
+      "myId": "9d05",
+      "userId": "6240",
+      "text": "Hey bro i am coming to the college could you please update me what happen in the clg by eveng"
+    },
+    {
+      "id": "b3b251c4-94df-48d3-be42-cd47f66d9084",
+      "myId": "9d05",
+      "userId": "6240",
+      "text": "msdnsmfnjsdkjdfsljadskl;fk;jkhkjhsjdl;fjhijfslkdjakilodf8u9fdhkjewl;oarpsidf8u9gidkjlsa;poifudkls;apoiudfkls;apoidgfjk"
+    },
+    {
+      "id": "75d304f0-0177-4485-9bc2-2af4b29399af",
+      "myId": "9d05",
+      "userId": "5306",
+      "text": "Hai hello"
+    },
+    {
+      "id": "81f38f85-5645-46a6-97d9-883071196fca",
+      "myId": "5306",
+      "userId": "9d05",
+      "text": "hello"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "394f",
+      "receiverId": "6240",
+      "sendId": "9d05",
+      "seen": true
+    },
+    {
+      "id": "8b99",
+      "receiverId": "9d05",
+      "sendId": "6240",
+      "seen": true
+    },
+    {
+      "id": "8bd4",
+      "receiverId": "3003",
+      "sendId": "9d05",
+      "seen": false
+    },
+    {
+      "id": "0b8a",
+      "receiverId": "5306",
+      "sendId": "9d05",
+      "seen": true
+    },
+    {
+      "id": "5cff",
+      "receiverId": "9d05",
+      "sendId": "5306",
+      "seen": false
     }
   ]
 }

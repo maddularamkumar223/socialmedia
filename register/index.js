@@ -2,7 +2,7 @@ let form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   passwordConformation();
-  location.href = "../login/index.html";
+  location.href = "../login/login.html";
 });
 let passwordConformation = () => {
   let formData = new FormData(form);
@@ -43,5 +43,5 @@ let addUser = async (data) => {
 
 let login = document.getElementById("login");
 login.addEventListener("click", () => {
-  location.href = "../login/index.html";
+  location.href = "../login/login.html";
 });

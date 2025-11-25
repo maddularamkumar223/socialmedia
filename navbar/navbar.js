@@ -39,7 +39,7 @@ let bottomData = [
   },
   {
     name: '<i class="fa-solid fa-plus"></i>',
-    path: "../post/index.html",
+    path: "../post/post.html",
   },
   {
     name: '<i class="fa-brands fa-youtube"></i>',
@@ -58,7 +58,7 @@ let topData = [
   },
   {
     name: '<i class="fa-solid fa-bell"></i>',
-    path: "#",
+    path: "../notification/notification.html",
   },
   {
     name: '<i class="fa-solid fa-message"></i>',
@@ -78,11 +78,11 @@ let navbar = [
   },
   {
     name: '<i class="fa-solid fa-plus"></i>',
-    path: "../post/index.html",
+    path: "../post/post.html",
   },
   {
-    name: '<i class="fa-solid fa-bell"></i>',
-    path: "#",
+    name: '<i class="fa-solid fa-bell"></i> <sup id="notification">0</sup>',
+    path: "../notification/notification.html",
   },
   {
     name: '<i class="fa-solid fa-message"></i>',
@@ -98,3 +98,20 @@ let navbar = [
   },
 ];
 createNavbar(navbar);
+
+let notification = document.getElementById("notification");
+notification.style.display = "none";
+
+let data = async () => {
+  let response = await fetch("http://localhost:3000/notifications");
+  let data = await response.json();
+  let filterData = data.filter(
+    (value) =>
+      value.receiverId == localStorage.getItem("id") && value.seen == false
+  );
+  if (filterData.length > 0) {
+    notification.innerHTML = filterData.length;
+    notification.style.display = "inline";
+  }
+};
+data();
